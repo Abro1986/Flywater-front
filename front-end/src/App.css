@@ -1,8 +1,8 @@
 ul {
   text-align: center;
-  display: block;
+  display: inline-block;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 a:hover {
@@ -11,20 +11,88 @@ a:hover {
 }
 
 a {
-  color: green;
+  color: gray;
+}
+
+h3, p {
+  color: black;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 20px 50px 20px 50px;
 }
 
 img {
-  height: 30px;
+  height: 100%;
   width: auto;
+}
+
+.wwdImg {
+  height: 200;
+  width: auto;
+}
+
+.fishpic {
+  height: 300px !important; 
+  width: auto !important;
+  display: block;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+input {
+  size: 100px;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1444076095244-6edf09c44c27?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=33c3f38d041842404a19b4d3e94a4929&auto=format&fit=crop&w=1275&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 #navbar {
   text-align: left;
   min-height: 30px;
   height: 30px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(19, 45, 61,1);
   border: 1px solid rgba(0,0,0,0.5);
+}
+
+#logo {
+  height: 100px;
+  width:auto;
+  position: relative;
+}
+
+.picbox {
+  height:100px;
+  width:100px;
+  display:inline-block;
+   
+}
+
+.flybox {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin: 0;
+}
+
+.textbox {
+  background: white;
+  opacity: 0.5;
+  margin: 15px 0 15px 0;
+}
+
+
+
+.Carousel {
+  
 }
 
 .App {
@@ -37,10 +105,14 @@ img {
 }
 
 .App-header {
-  background-color: #222;
+  background : #375161;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: 150px;
+  margin: 0;
   padding: 20px;
-  color: white;
+  color: #718591;
 }
 
 .App-title {
@@ -49,6 +121,7 @@ img {
 
 .App-intro {
   font-size: large;
+
 }
 
 @keyframes App-logo-spin {

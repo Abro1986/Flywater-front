@@ -1,27 +1,23 @@
-import React, {Component} from 'react'
-import drake from '../images/drakeN.png'
+import React from 'react';
+
 import {
-  BrowserRouter as Router,
   Route,
-  Link
+  Switch
 } from 'react-router-dom'
+import About from '../Containers/About'
+import Contact from '../Components/contact'
+import Recent from '../Components/recent'
+import Projects from '../Components/projects'
+import ControlledCarousel from '../Components/team'
 
-class Navbar extends Component { 
-	render (){
-		return (
-		<Router>
-      <div>
-      	<img className="App-logo" src={drake} alt="nothing"/>
-        <a><Link to='/'>home</Link> </a>
-        <a> what we do</a>
-        <a> recent </a>
-        <a> projects </a>
-        <a> team </a>
-        <a> contact </a>
-       </div>  
-    </Router>
-    )
-	}	
-}
+export default (
+    <Switch>
+      <Route  exact path='/' component={ About}/>
+      <Route  path='/projects' component={ Projects}/>
+      <Route  path='/recent' component={ Recent}/>
+      <Route  path='/team' component={ ControlledCarousel}/>
+      <Route  path='/contact' component={ Contact}/>
+    </Switch>
+)
 
-export default Navbar;
+

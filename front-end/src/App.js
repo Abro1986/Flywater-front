@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './Config/routes';
+import Header from './Components/header';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link
+// } from 'react-router-dom';
+import MyRoutes from './Config/routes';
+
+//import About from './Containers/About'
 
 
 
@@ -11,16 +19,20 @@ class App extends Component {
         <header className="App-header">
           <nav id="navbar" className="navbar navbar-default navbar-fixed-top">
             <div className="container">
-              
-              <Navbar/>
+              <Header/>
+               
             </div>
           </nav>
           
-          <h1 className="App-title">FlyWater construction</h1>
-        </header>
-        <p className="App-intro">
+            <img id='logo' src="http://flywater.com/images/ico/fb_share.png"></img>
+          
+          
+          <h3 className="App-intro">
           We get your drift
-        </p>
+          </h3>
+        </header>
+        
+          {MyRoutes}
       </div>
     );
   }
