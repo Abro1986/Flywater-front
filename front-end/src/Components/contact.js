@@ -34,15 +34,20 @@ class Contact extends Component {
 		}
 
 		axios.post('https://flywater-back.herokuapp.com/api/mail', newEmail)
-		console.log(this.state.name)
+		console.log(event.target.email.value)
 		console.log(this.state.email)
 //		let name = this.state.name
-		this.setState({
-			name: '',
-			email: '',
-			content: '',
-			post: 'Thank you for your message!'
-		})
+		if (event.target.email.value !== '') {
+			this.setState({
+				name: '',
+				email: '',
+				content: '',
+				post: 'Thank you for your message!'
+			})
+		} else {this.setState({
+				post: 'please enter an email'
+			})
+		}
 	}
 
 	componentDidMount(event){
@@ -54,9 +59,11 @@ class Contact extends Component {
   render() {
     return (
       <div className='river'>
-      	<h3>Contact Us</h3>
-      	<p>Fill in the blanks below and we'll get back to you ASAP</p>
-      	<p>{this.state.post}</p>
+      	<div className='textbox'>
+	      	<h3>Contact Us</h3>
+	      	<p>Fill in the blanks below and we'll get back to you ASAP</p>
+	      	<p>{this.state.post}</p>
+      	</div>
         <form className='container' onSubmit={ this.onFormSubmit }>
         	<div className="form-row ">
     				<div className="form-group col-md-6">
