@@ -32,12 +32,12 @@ class Contact extends Component {
 			email: this.state.email,
 			content: this.state.content
 		}
-
+		if (event.target.email.value !== '') {
 		axios.post('https://flywater-back.herokuapp.com/api/mail', newEmail)
 		console.log(event.target.email.value)
 		console.log(this.state.email)
 //		let name = this.state.name
-		if (event.target.email.value !== '') {
+		
 			this.setState({
 				name: '',
 				email: '',
@@ -97,7 +97,7 @@ class Contact extends Component {
 
     			</div>
   			</div>
-        	<button type='submit'>Send it</button>
+        	<button type='submit' class="btn btn-primary">Send it</button>
         </form>
       </div>  
     );

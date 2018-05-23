@@ -34,10 +34,11 @@ img {
 .wwdImg {
   height: 200;
   width: auto;
+  float: right;
 }
 
 .fishpic {
-  height: 300px !important; 
+  height: 375px !important; 
   width: auto !important;
   display: block;
   margin-left:  auto;
@@ -77,8 +78,8 @@ body {
 }
 
 .flybox {
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   display: inline-block;
   margin: 0;
 }
